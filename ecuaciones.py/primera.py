@@ -14,19 +14,19 @@ y = sympy.Function('y')
 
 
 # Condición inicial
-ics =({y(3): -1})
+cond =({y(3): -1})
 
 # expreso la ecuacion
 f = (x**2*(y(x)) - (y(x)))/ ((y(x))+1)
 
 
 # Resolviendo la ecuación
-edo_sol = sympy.Eq(y(x).diff(x) , f)
-print(edo_sol)
+sol = sympy.Eq(y(x).diff(x) , f)
+print(sol)
 
 #Aquí encontramos la solución general de nuestra Ecuación diferencial, ahora reemplazamos los valores de la condición inicial en nuestra ecuación.
-C_eq = sympy.Eq(edo_sol.lhs.subs(x, 0).subs(ics), edo_sol.rhs.subs(x, 0))
-print(C_eq)
+eqG = sympy.Eq(sol.lhs.subs(x, 0).subs(cond), sol.rhs.subs(x, 0))
+print(eqG)
 
 #Aquí encontramos la solución general de nuestra Ecuación diferencial, ahora reemplazamos los valores de la condición inicial en nuestra ecuación.
-print(sympy.solve(C_eq))
+print(sympy.solve(eqG))
