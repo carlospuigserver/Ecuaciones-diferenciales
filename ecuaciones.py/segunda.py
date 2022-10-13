@@ -23,7 +23,7 @@ cond =({y(pi/2): e})
 
 
 # expreso la ecuacion
-f =sympy.Eq(sin(x)*y(x).diff(),y(x)*nep(y(x)))
+f =(sin(x)*y(x).diff(),y(x)*nep(y(x)))
 
 
 # Resolviendo la ecuación
