@@ -16,7 +16,7 @@ sympy.init_printing(use_latex='mathjax')
 
 # defino las incognitas
 y = sympy.Function('y')
-x = sympy.Symbol('x')
+x = sympy.symbols('x')
 
 # Condición inicial
 cond =({y(pi/2): e})
